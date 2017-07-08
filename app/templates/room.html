@@ -1,0 +1,8 @@
+ <h1>Home Page</h1>
+ <main class="room-list container">
+     <table class="room-list">
+         <tr class="room-list-item" ng-repeat="room in room.roomData" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
+             <td class="room-item-title">{{room.$value.toUpperCase()}}</td>
+         </tr>
+     </table>
+ </main>
