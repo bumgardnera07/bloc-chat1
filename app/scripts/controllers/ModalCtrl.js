@@ -1,18 +1,23 @@
 (function() {
-    function ModalCtrl($uibModalInstance) {
-      var $ctrl= this;
+    function ModalCtrl($uibModalInstance, $scope, userForm) {
+      $scope.form ={};
 
-      $ctrl.ok = function () {
-        $uibmodalInstance.close();
-      };
+      $scope.submitForm = function () {
+        if ($scope.form.userForm.$valid) {
+            console.log('user form is in scope');
+            $uibModalInstance.close('closed');
+        } else {
+            console.log('userform is not in scope');
+        }
+    };
 
-      $ctrl.cancel = function () {
-        $uibmodalInstance.dismiss('cancel');
+      $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
       };
 
     }
 
     angular
         .module('blocChat1')
-        .controller('ModalCtrl', ['$uibModalInstance', ModalCtrl]);
+        .controller('ModalCtrl', ['$uibModalInstance', '$scope', 'userForm', ModalCtrl]);
 })();

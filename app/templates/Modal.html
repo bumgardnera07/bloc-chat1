@@ -1,11 +1,14 @@
-        <div class="modal-header">
-            <h3 class="modal-title" id="modal-title">Please name the new chat room!</h3>
+        <div class="modal-header" >
+            <h3>Please name the new chat room!</h3>
         </div>
-        <form name="newChatRoomForm">
-          <input ng-model ="newRoom.value" class="form-control" type = "text" placeholder="Chat Room Name" title="ChatRoomName" />
-        </form>
+        <form name="form.userForm" ng-submit="submitForm()" novalidate>
+          <div class="form-group">
+            <input ng-model ="value" class="form-control" type ="text" placeholder="Chat Room Name" required>
+            <p ng-show="form.userForm.name.$invalid && !form.userForm.name.$pristine" class="help-block">Name is required!</p>
+          </div>
 
         <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+            <button class="btn btn-primary" type="submit">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
         </div>
+      </form>
