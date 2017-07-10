@@ -1,10 +1,10 @@
 (function() {
-    function ModalCtrl($uibModalInstance, $scope, userForm) {
+    function ModalCtrl($uibModalInstance, $scope, userForm, Room) {
       $scope.form ={};
 
       $scope.submitForm = function () {
         if ($scope.form.userForm.$valid) {
-            console.log('user form is in scope');
+            Room.add($scope.value);
             $uibModalInstance.close('closed');
         } else {
             console.log('userform is not in scope');
@@ -19,5 +19,5 @@
 
     angular
         .module('blocChat1')
-        .controller('ModalCtrl', ['$uibModalInstance', '$scope', 'userForm', ModalCtrl]);
+        .controller('ModalCtrl', ['$uibModalInstance', '$scope', 'userForm', 'Room', ModalCtrl]);
 })();

@@ -19,10 +19,6 @@
               }
             }
         });
-        modalInstance.result.then(function () {
-              //Room.add({$value: 'fxxx'});
-              console.log($uibModal);
-            });
       };
 
       //this.add = Room.add(this.newRoom);
