@@ -1,0 +1,10 @@
+html {
+     height: 100%; /* makes sure our HTML takes up 100% of the browser window */
+     font-size: 100%;
+ }
+
+ body {
+    font-family: 'ubuntu'; /* sets our font to the "Open Sans" typeface */           /* sets the text color to white */
+    min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
+  padding-bottom: 200px;
+}

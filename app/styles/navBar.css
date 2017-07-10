@@ -1,0 +1,66 @@
+.nav-bar {
+    position: fixed;
+    bottom:0;
+    left: 0;
+    top: 0;
+    width: 240px;
+    background-color: rgba(185, 30, 30, .95);
+}
+
+.room-list-title {
+  width: 210px;
+  font-size: 20pt;
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  padding-bottom: 15px;
+}
+
+.room-list-title h1 {
+  display: block;
+  position: relative;
+  padding-top: 18px;
+  padding-left: 13px;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+
+.new-room {
+  display: block;
+  color: rgba(175, 90, 35, .95);
+  background-color: rgba(0, 0, 0, .12);
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  width: 108px;
+  margin-left: 45px;
+}
+
+.new-room-item:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.room-list {
+  width: 210px;
+  }
+.room-item-title {
+  padding-left: 13px;
+  border: 0.5px solid white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: black;
+  font-weight: bold;
+}
+.new-room-item {
+  padding-left: 13px;
+  border: 0.5px solid white;
+  border-top: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: black;
+  font-weight: bold;
+  width: 210px;
+  margin: 0;
+  display: inherit;
+}

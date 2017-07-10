@@ -1,8 +1,14 @@
- <h1>Home Page</h1>
- <main class="room-list container">
+ <section class="nav-bar" ng-controller="NavBarCtrl as $ctrl">
+   <script type="text/ng-template" id=Modal.html></script>
+   <div class="container">
+     <div class="room-list-title">
+       <h1>bloc chat~</h1>
+     </div>
      <table class="room-list">
-         <tr class="room-list-item" ng-repeat="room in room.roomData" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
-             <td class="room-item-title">{{room.$value.toUpperCase()}}</td>
+         <tr class="room-list-item" ng-repeat="room in $ctrl.roomData" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
+             <td class="room-item-title">{{room.$value}}</td>
          </tr>
      </table>
- </main>
+     <div class="new-room-item" ng-click="$ctrl.open()">new room...</div>
+   </div>
+ </section>
