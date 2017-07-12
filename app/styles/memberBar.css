@@ -1,0 +1,9 @@
+.memberbar {
+    position: fixed;
+    bottom:0;
+    right: 0;
+    top: 0;
+    width: 200px;
+    background-color: rgba(200, 200, 200, .8);
+    border-left: 3pt solid gray;
+}

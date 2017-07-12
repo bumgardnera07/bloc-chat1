@@ -2,11 +2,9 @@
             <h3>Please name the new chat room!</h3>
         </div>
         <form name="form.userForm" ng-submit="submitForm()" novalidate>
-          <div class="form-group">
             <input ng-model ="value" class="form-control" type ="text" placeholder="Chat Room Name" required>
             <p ng-show="form.userForm.name.$invalid && !form.userForm.name.$pristine" class="help-block">Name is required!</p>
-          </div>
-        
+
         <div class="modal-footer">
             <button class="btn btn-primary" type="submit">OK</button>
             <button class="btn btn-warning" ng-click="cancel()">Cancel</button>

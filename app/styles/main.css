@@ -1,10 +1,72 @@
 html {
-     height: 100%; /* makes sure our HTML takes up 100% of the browser window */
+     height: auto; /* makes sure our HTML takes up 100% of the browser window */
      font-size: 100%;
  }
 
  body {
+   position: absolute;
     font-family: 'ubuntu'; /* sets our font to the "Open Sans" typeface */           /* sets the text color to white */
-    min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
-  padding-bottom: 200px;
+    height: auto;
+    width: auto;         /* says the height of the body must be, at minimum, 100% of the window */
+    left: 240px;
+    right: 200px;
+    top: 0;
+    bottom: 0;
+}
+
+main {
+  height: 100%;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+table {
+  width: inherit;
+}
+
+.chatbox {
+  height: 100%;
+  left: 0;
+  right:200px;
+}
+
+.chatbox {
+  top: 0;
+  bottom: 0;
+}
+
+.message {
+  bottom: 0;
+}
+
+tr.room-name, tr.message-list, tr.input-bar {
+  color: red;
+  height: auto;
+  position: relative;
+  top: 0;
+  border-bottom: 1pt solid black;
+
+}
+
+tr.message-list {
+  height: 80%;
+
+}
+
+tr td div {
+  height: auto;
+  bottom: 0;
+}
+
+table.input-bar {
+  height: 10%;
+}
+
+input {
+    padding: 12px 20px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
 }

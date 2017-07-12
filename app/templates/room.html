@@ -1,13 +1,21 @@
- <section class="nav-bar" ng-controller="NavBarCtrl as navbar">
-   <div class="container">
-     <div class="room-list-title">
-       <h1>bloc chat~</h1>
-     </div>
-     <table class="room-list">
-         <tr class="room-list-item" ng-repeat="room in navbar.roomData" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
-             <td class="room-item-title">{{room.$value}}</td>
-         </tr>
-     </table>
-     <div class="new-room-item" ng-click="navbar.open()">new room...</div>
-   </div>
- </section>
+<main class="room">
+  <table class="chatbox">
+    <tr class="room-name">
+      <td><h1>Sporrrrrrrts</h1></td>
+    </tr>
+    <tr class="message-list">
+      <td><div class="container">
+      Sportsss Time Yaaaa</div></td>
+    </tr>
+  <tr class="input-bar">
+      <td><form name="form.message" ng-submit="send()" novalidate>
+        <input class="message" ng-model="usermessage" type="text" required>
+      </form></td>
+  </tr>
+  </table>
+</main>
+
+
+
+<ng-include src="'/templates/navbar.html'"></ng-include>
+<ng-include src="'/templates/memberbar.html'"></ng-include>

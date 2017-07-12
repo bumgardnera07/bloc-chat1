@@ -1,7 +1,6 @@
 (function() {
-    function NavBarCtrl($uibModal, Room, NewRoom, $scope, $log) {
+    function NavBarCtrl($uibModal, Room, $scope, $log) {
       var $ctrl = this;
-      $ctrl.newRoom = NewRoom;
 
       $ctrl.open= function() {
 
@@ -21,12 +20,11 @@
         });
       };
 
-      //this.add = Room.add(this.newRoom);
       this.roomData = Room.all;
 
     }
 
     angular
         .module('blocChat1')
-        .controller('NavBarCtrl', ['$uibModal', 'Room', 'NewRoom', '$scope', '$log', NavBarCtrl]);
+        .controller('NavBarCtrl', ['$uibModal', 'Room', '$scope', '$log', NavBarCtrl]);
 })();

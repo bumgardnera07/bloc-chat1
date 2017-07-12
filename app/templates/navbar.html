@@ -1,0 +1,13 @@
+ <section class="nav-bar" ng-controller="NavBarCtrl as navbar">
+   <div class="container">
+     <div class="room-list-title">
+       <h1>bloc chat~</h1>
+     </div>
+     <table class="room-list">
+         <tr class="room-list-item" ng-repeat="room in navbar.roomData" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
+             <td class="room-item-title">{{room.$value}}</td>
+         </tr>
+     </table>
+     <div class="new-room-item" ng-click="navbar.open()">new room...</div>
+   </div>
+ </section>

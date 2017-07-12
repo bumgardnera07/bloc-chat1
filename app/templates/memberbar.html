@@ -1,0 +1,12 @@
+ <section class="memberbar" ng-controller="memberBarCtrl as membar">
+   <div class="container">
+     <div class="member-list-title">
+       <h1>Chatters</h1>
+     </div>
+     <table class="member-list">
+         <tr class="member-list-item" ng-repeat="member in membar.memberData" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
+             <td class="member-item-title">{{member.$value}}</td>
+         </tr>
+     </table>
+   </div>
+ </section>
