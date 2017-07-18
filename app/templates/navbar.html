@@ -4,8 +4,8 @@
        <h1>bloc chat~</h1>
      </div>
      <table class="room-list">
-         <tr class="room-list-item" ng-repeat="room in navbar.roomData" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
-             <td class="room-item-title">{{room.$value}}</td>
+         <tr class="room-list-item" ng-repeat="room in navbar.roomData.all" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
+             <td class="room-item-title" ng-click="navbar.roomData.setCurrentRoom(room); navbar.messages.getByRoomId(room.$id)">{{room.$value}}</td>
          </tr>
      </table>
      <div class="new-room-item" ng-click="navbar.open()">new room...</div>

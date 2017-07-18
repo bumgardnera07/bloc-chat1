@@ -5,7 +5,12 @@
     var roomRef = rootRef.child('rooms');
     var rooms = $firebaseArray(roomRef);
 
+    Room.currentRoom ={};
     Room.all = rooms;
+
+    Room.setCurrentRoom = function(room) {
+      Room.currentRoom = room;
+    }
 
     Room.add = function(roomName) {
       rooms.$add(roomName)

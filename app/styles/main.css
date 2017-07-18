@@ -23,7 +23,7 @@ main {
 }
 
 table {
-  width: inherit;
+  width: 100%;
 }
 
 .chatbox {
@@ -55,7 +55,7 @@ tr.message-list {
 
 }
 
-tr td div {
+tr td {
   height: auto;
   bottom: 0;
 }

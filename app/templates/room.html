@@ -1,11 +1,10 @@
 <main class="room">
   <table class="chatbox">
     <tr class="room-name">
-      <td><h1>Sporrrrrrrts</h1></td>
+      <td><h1>{{room.roomData.currentRoom.$value}}</h1></td>
     </tr>
-    <tr class="message-list">
-      <td><div class="container">
-      Sportsss Time Yaaaa</div></td>
+    <tr class="message-list" ng-repeat="message in room.messages.currentMessages">
+      <td><ul class="message"><span class="username">{{message.username}}</span><span class="content">{{message.content}}</span><span class="timestamp">{{message.sentAt}}</span></ul></td>
     </tr>
   <tr class="input-bar">
       <td><form name="form.message" ng-submit="send()" novalidate>
@@ -18,4 +17,5 @@
 
 
 <ng-include src="'/templates/navbar.html'"></ng-include>
-<ng-include src="'/templates/memberbar.html'"></ng-include>
+
+<!-- <ng-include src="'/templates/memberbar.html'"></ng-include> -->

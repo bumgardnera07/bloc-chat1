@@ -1,8 +1,10 @@
 (function() {
-    function RoomCtrl() {
+    function RoomCtrl($scope, Room, Message) {
+      this.roomData = Room;
+      this.messages = Message;
     }
 
     angular
         .module('blocChat1')
-        .controller('RoomCtrl', [RoomCtrl]);
+        .controller('RoomCtrl', ['$scope', 'Room', 'Message', RoomCtrl]);
 })();
