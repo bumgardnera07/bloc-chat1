@@ -4,11 +4,12 @@
       <td><h1>{{room.roomData.currentRoom.$value}}</h1></td>
     </tr>
     <tr class="message-list" ng-repeat="message in room.messages.currentMessages">
-      <td><ul class="message"><span class="username">{{message.username}}</span><span class="content">{{message.content}}</span><span class="timestamp">{{message.sentAt}}</span></ul></td>
+      <td><ul class="message"><span class="username">{{message.username}}</span>       <span class="content">{{message.content}}</span>    <span class="timestamp">{{message.sentAt}}</span></ul></td>
     </tr>
   <tr class="input-bar">
-      <td><form name="form.message" ng-submit="send()" novalidate>
+      <td><form name="form.message" ng-submit="room.messages.send(usermessage)" novalidate>
         <input class="message" ng-model="usermessage" type="text" required>
+        <button class="btn btn-primary" type="submit">Send</button>
       </form></td>
   </tr>
   </table>
