@@ -7,7 +7,7 @@
       <td><ul class="message"><span class="username">{{message.username}}</span>       <span class="content">{{message.content}}</span>    <span class="timestamp">{{message.sentAt}}</span></ul></td>
     </tr>
   <tr class="input-bar">
-      <td><form name="form.message" ng-submit="room.messages.send(usermessage)" novalidate>
+      <td><form name="form.message" ng-submit="room.send(usermessage)" novalidate>
         <input class="message" ng-model="usermessage" type="text" required>
         <button class="btn btn-primary" type="submit">Send</button>
       </form></td>
@@ -19,4 +19,4 @@
 
 <ng-include src="'/templates/navbar.html'"></ng-include>
 
-<!-- <ng-include src="'/templates/memberbar.html'"></ng-include> -->
+<ng-include src="'/templates/memberbar.html'"></ng-include>
