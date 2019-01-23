@@ -46,24 +46,3 @@ The text in the application will not update on every keystroke, but changes will
 ├── package.json
 └── server.js
 ```
-
-
-### Assets/Images
-
-Add images to the `app/assets/images` directory. To reference images in HTML, use the path `/assets/images/<image file name>.jpg`. For example, to include the image called `bloc-white-logo.png`, the path for the `src` attribute in the HTML would be:
-
-```html
-<img src="/assets/images/bloc-white-logo.png">
-```
-
-__Note:__ A sample image has been added to `app/images`. To remove the image from the application, run the following command from the root of repo:
-
-```bash
-$ rm -f app/assets/images/bloc-white-logo.png
-```
-
-To reference any other assets, like the music in Bloc Jams, use the path `assets/<asset-type>/<asset-file-name>`.
-
-### Difference between Pages and Templates
-
-The `templates` directory should hold any HTML files used as templates in Angular states configured by UI Router. All other HTML files belong in the `pages` directory.
